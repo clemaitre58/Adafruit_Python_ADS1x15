@@ -12,7 +12,7 @@ import sys
 
 def signal_handler(signal, frame):
     print('You pressed Ctrl+C!')
-    sys.exit(0)
+    break
 
 
 signal.signal(signal.SIGINT, signal_handler)
