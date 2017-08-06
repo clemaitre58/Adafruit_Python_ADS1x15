@@ -7,12 +7,13 @@ import time
 # Import the ADS1x15 module.
 import Adafruit_ADS1x15
 import signal
-import sys
+import os
 
 
 def signal_handler(signal, frame):
     print('You pressed Ctrl+C!')
-    break
+    status = 0   
+    os._exit(status) 
 
 
 signal.signal(signal.SIGINT, signal_handler)
